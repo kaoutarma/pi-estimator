@@ -20,11 +20,6 @@ def is_point_inside_unit_circle(p):
 # La fonction prend comme parametre n = nombre de points
 # retourne le temps d'execution, la différence entre math.pi le pi estimé et la valeur de pi estimé
 def pi_estimator_spark(n):
-  t0=time()
-#Création d'un RDD avec la fonction is_point_inside_unit_circle et faire la somme de tous les RDD pour avoir le nombre total de points
-  count = sc.parallelize(range(0, n)).map(is_point_inside_unit_circle).reduce(add)
-# Calcul de PI
-def pi_estimator_spark(n):
     t0=time()
 #Création d'un RDD avec la fonction is_point_inside_unit_circle et faire la somme de tous les RDD pour avoir le nombre total de points
     count = sc.parallelize(range(0, n)).map(is_point_inside_unit_circle).reduce(add)
